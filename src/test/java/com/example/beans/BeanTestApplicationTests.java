@@ -29,8 +29,7 @@ public class BeanTestApplicationTests {
     private DemoRepository demoRepository;
 
     @Container
-    private static final SharedPostgresqlContainer POSTGRE_SQL_CONTAINER = SharedPostgresqlContainer.getInstance()
-        .withInitScript("default-schema.sql");
+    private static final SharedPostgresqlContainer POSTGRE_SQL_CONTAINER = SharedPostgresqlContainer.getInstance();
 
     static class Initializer implements ApplicationContextInitializer<ConfigurableApplicationContext> {
         public void initialize(final ConfigurableApplicationContext configurableApplicationContext) {

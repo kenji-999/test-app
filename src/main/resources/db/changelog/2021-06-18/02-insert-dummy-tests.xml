@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <changeSet author="Vladimir Kozlov" id="1624029226083-2">
+        <insert tableName="tests">
+            <column name="id" value="1"/>
+            <column name="value" value="dummy-value"/>
+        </insert>
+
+        <insert tableName="tests">
+            <column name="id" value="2"/>
+            <column name="value" value="dummy-value"/>
+        </insert>
+
+        <insert tableName="tests">
+            <column name="id" value="3"/>
+            <column name="value" value="dummy-value"/>
+        </insert>
+
+        <insert tableName="tests">
+            <column name="id" value="4"/>
+            <column name="value" value="dummy-value"/>
+        </insert>
+
+        <insert tableName="tests">
+            <column name="id" value="5"/>
+            <column name="value" value="dummy-value"/>
+        </insert>
+
+        <insert tableName="tests">
+            <column name="id" value="6"/>
+            <column name="value" value="dummy-value"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

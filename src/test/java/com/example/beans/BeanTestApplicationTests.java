@@ -16,6 +16,8 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 @ActiveProfiles("test")
@@ -48,6 +50,7 @@ public class BeanTestApplicationTests {
         final var entities = demoRepository.findAll();
 
         //then
+        assertThat(entities).hasSize(6);
         assertEquals("beanForBeanInjectionWithoutAutowiredNumberOne", demoService.getFirstBeanValue());
         assertEquals("beanForBeanInjectionWithoutAutowiredNumberTwo", demoService.getSecondBeanValue());
         assertThat(demoService.getDemoEntities()).containsAll(entities);
